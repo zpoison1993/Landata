@@ -33,6 +33,9 @@
         button:focus {
             outline: none;
         }
+        section {
+            padding-bottom: 50px;
+        }
         .wrapper {
             display: flex;
             flex-direction: column;
@@ -48,11 +51,11 @@
         }
         .header_content_left {
             flex: 60%;
-            padding-left: 15%;
+            padding-left: 20%;
         }
         .header_content_right {
             flex: 40%;
-            padding-right: 15%;
+            padding-right: 20%;
         }
         .menu_list {
             display: flex;
@@ -61,7 +64,10 @@
         }
         .menu_list li {
             width: auto;
-            margin-right: 15px;
+            margin-left: 15px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: normal;
+            font-size: 22px;
         }
         .menu_list li:hover {
             text-decoration: underline;
@@ -77,6 +83,18 @@
         }
         .link_holder {
             margin-left: 0.2rem;
+        }
+        @media (max-width: 590px) {
+            .header_content_left {
+                padding-top: 2%;
+                padding-bottom: 2%;
+            }
+            .logo {
+                font-size: 24px;
+            }
+            .link_holder {
+                font-size: 22px;
+            }
         }
         .icon_holder {
             width: 20px;
@@ -127,12 +145,12 @@
             min-height: 768px;
         }
         .main_central_unit {
-            margin: 2rem 15%;
+            margin: 2rem 20%;
         }
         .main_upper_unit {
             display: flex;
             justify-content: flex-end;
-            margin: 2rem 15% 0;
+            margin: 2rem 20% 0;
         }
         .main_contacts_wrapper {
             display: flex;
@@ -169,6 +187,7 @@
 
         .section-subheading {
             font-size: 36px;
+            font-weight: 900;
         }
         .actions_wrapper {
             display: flex;
@@ -273,7 +292,7 @@
                 font-size: 32px;
             }
             .secondary {
-                font-size: 36px;
+                font-size: 31px;
             }
             .section-subheading {
                 font-size: 24px;
@@ -292,6 +311,9 @@
             .media {
                 display: none;
             }
+            .order {
+                width: 320px;
+            }
         }
         .details_wrapper {
             display: flex;
@@ -305,12 +327,15 @@
             font-weight: 400;
             margin-bottom: 2rem;
         }
+        .main_central_unit > .details_wrapper > .detail_item {
+            max-width: 500px;
+        }
         .detail_img_item {
             display: flex;
             color: white;
             font-size: 14px;
             font-weight: 400;
-            max-width: 370px;
+            max-width: 360px;
             margin-top: 1rem;
         }
         .details_wrapper > .detail_item > .detail {
@@ -333,15 +358,19 @@
             min-height: 768px;
         }
         .skill_wrapper > .header_wrapper {
-            margin: 7rem 15% 40px;
+            margin: 7rem 20% 40px;
         }
         .skill_content {
             display: flex;
             justify-content: flex-start;
-            margin: 0 15%;
+            margin: 0 20%;
         }
         .skill_content_left {
             margin-right: 2rem;
+            max-width: 555px;
+        }
+        .skill_content_right {
+            max-width: 555px;
         }
         .skill_content_left > .btn_wrapper {
             margin-top: 2rem;
@@ -355,6 +384,9 @@
         }
         .skill_content_left > .skill_content_brief > .chain {
             margin-left: 0.5rem;
+        }
+        .skill_content_right > .skill_content_brief {
+            margin-bottom: 0.55rem;
         }
         .skill_content_right > .main_contacts {
             margin-top: 1rem;
@@ -376,7 +408,7 @@
         @media (max-width: 480px) {
             .skill_wrapper > .header_wrapper {
                 width: auto;
-                margin: 7rem 5% 40px;
+                margin: 4rem 5% 40px;
             }
             .skill_content {
                 margin: 0 5%;
@@ -393,7 +425,7 @@
         }
         .section_service {
             background: url("./assets/images/3.jpg") no-repeat;
-            background-size: cover; /* Масштабируем фон */
+            /*background-size: cover; !* Масштабируем фон *!*/
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -408,31 +440,42 @@
             margin-bottom: 1rem;
         }
         .service_wrapper > div {
-            margin: 0 15%;
+            margin: 0 20%;
         }
         .service_wrapper > .header_wrapper {
             width: 30%;
-            margin: 7rem 15% 40px;
+            margin: 7rem 20% 40px;
+        }
+        .service_wrapper > .header_wrapper > .detail_item {
+            margin-bottom: 1rem;
         }
         .inverted {
             color: black;
         }
         .service_content {
             display: flex;
-            margin-bottom: 2rem;
-            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            /*justify-content: space-between;*/
         }
         .service-item {
-            width: 30%;
+            /*width: 30%;*/
+            max-width: 315px;
+            font-family: 'Montserrat', sans-serif;
+            margin-right: 24px;
+        }
+        .service-item > .detail_item {
+            font-size: 16px;
         }
         .service-item > .chain {
             margin-bottom: 0.5rem;
+            font-weight: 900;
         }
         .service-item--left {
-            width: 33%;
+            width: 50%;
         }
         .service-item--right {
-            width: 66%;
+            width: 50%;
+            max-width: 750px;
         }
         @media (max-width: 795px) {
             .service_wrapper > .header_wrapper {
@@ -453,7 +496,10 @@
             }
             .service_wrapper > .header_wrapper {
                 width: auto;
-                margin: 7rem 5% 40px;
+                margin: 4rem 5% 40px;
+            }
+            .service_wrapper > .header_wrapper > .secondary {
+                text-align: left;
             }
             .service_wrapper > .header_wrapper > .detail_item:last-child {
                 margin-bottom: 0;
@@ -472,10 +518,10 @@
             min-height: 768px;
         }
         .portfolio_wrapper > div {
-            margin: 2rem 15%;
+            margin: 2rem 20%;
         }
         .portfolio_wrapper > .header_wrapper {
-            margin: 7rem 15% 40px;
+            margin: 7rem 20% 40px;
         }
         .portfolio_content {
             display: flex;
@@ -518,8 +564,15 @@
             }
         }
         @media (max-width: 590px) {
+            .portfolio_wrapper {
+                margin: 2rem 13%;
+            }
+            .portfolio_wrapper > .header_wrapper {
+                margin: 4rem 5% 0;
+            }
             .portfolio_wrapper > div {
                 width: auto;
+                margin: 2rem 0;
             }
             .portfolio_content {
                 align-items: center;
@@ -533,14 +586,14 @@
                 justify-content: center;
             }
             .portfolio_img {
-                transform: scale(0.8);
+                transform: scale(0.95);
             }
             .detail_img_item {
                 display: flex;
                 justify-content: center;
                 text-align: center;
                 /*padding: 0 2rem;*/
-                /*width: 90%;*/
+                width: auto;
             }
             .portfolio_media {
                 flex-direction: column;
@@ -549,6 +602,7 @@
             .media_caption {
                 margin: 0;
                 text-align: center;
+                margin-bottom: 1rem;
             }
         }
         .section_reviews {
@@ -561,10 +615,10 @@
         }
         .reviews_wrapper > div {
             width: 60%;
-            margin: 0 15% 2rem;
+            margin: 0 20% 2rem;
         }
         .reviews_wrapper > .header_wrapper {
-            margin: 7rem 15% 40px;
+            margin: 7rem 20% 40px;
         }
         .reviews_content {
             display: flex;
@@ -572,6 +626,7 @@
             margin-bottom: 2rem;
         }
         .review_item {
+            max-width: 360px;
             width: 30%;
             position: relative;
             background: #FFFFFF;
@@ -580,6 +635,7 @@
         }
         .single {
             width: 62%;
+            max-width: 750px;
         }
         @media (max-width: 795px) {
             .reviews_content {
@@ -593,8 +649,12 @@
 
         }
         @media (max-width: 590px) {
+            .reviews_wrapper > .header_wrapper {
+                margin: 4rem 20% 40px;
+            }
             .reviews_wrapper > div {
                 width: auto;
+                margin: 0 5% 2rem;
             }
             .review_item {
                 width: 100%;
@@ -611,6 +671,10 @@
             font-size: 16px;
             line-height: 140%;
             padding: 1rem;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .review_text_wrapper > p > span {
             font-weight: 700;
@@ -627,13 +691,17 @@
             flex-direction: column;
             width: 100%;
             min-height: 431px;
+            padding-bottom: 50px;
         }
         .footer_wrapper {
             display: flex;
             width: 60%;
         }
-        .footer_wrapper > div {
-            margin: 7rem 15% 0;
+        .footer_content_right {
+            margin: 8rem 20% 7rem 0;
+        }
+        .footer_content_left {
+            margin: 7rem 20% 7rem 33%;
         }
         .old_contacts {
             margin-top: 2rem;
@@ -642,16 +710,20 @@
         }
         .contact {
             margin-bottom: 1rem;
+            font-size: 24px;
+            font-weight: 400;
         }
         .contact > p {
-            font-size: 24px;
             font-weight: 700;
             color: white;
         }
         .footer_content_right {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-around;
+        }
+        .footer_content_right > .detail_item > .main_contacts {
+            margin-top: 0.5rem;
         }
         .footer_content_right > .detail_item > .main_contacts > div {
             margin-right: 1rem;
@@ -665,7 +737,7 @@
                 width: 100%;
             }
             .footer_content_left > .header_wrapper {
-                width: 80%;
+                width: 100%;
             }
             .footer_content_left > .header_wrapper > .section-heading {
                 text-align: left;
@@ -673,7 +745,7 @@
             .footer_content_right--mobile {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: space-around;
             }
             .footer_content_right--mobile > div {
                 margin-bottom: 1rem;
@@ -681,22 +753,31 @@
             .footer_content_right {
                 display: none;
             }
+            .footer_content_right--mobile > .detail_item > .main_contacts {
+                margin-top: 0.5rem;
+            }
             .footer_content_right--mobile > .detail_item > .main_contacts > div  {
                 margin-right: 1rem;
             }
         }
         @media (max-width: 590px) {
+            .footer_content_left > .header_wrapper {
+                margin: 0 5% 0;
+            }
             .footer_content_left {
                 width: auto;
             }
             .footer_wrapper > div {
-                margin: 7rem 5% 0;
+                margin: 7rem 5% 4rem;
             }
             .footer_content_right--mobile {
                 width: auto;
             }
+            .footer_content_right--mobile > .btn_wrapper > .order {
+                max-width: 230px;
+            }
             .old_contacts {
-                width: 100%;
+                width: 89%;
             }
         }
         .icon_holder:hover > svg {
@@ -823,7 +904,7 @@
               <div class="actions_wrapper">
                   <div class="btn_wrapper">
                       <button class="order">
-                          Заказать ремонт под ключ
+                          Заказать ремонт
                       </button>
                       <p class="btn_caption">
                           Заполните форму, чтобы оставить заявку.
@@ -863,7 +944,7 @@
                       </div>
                       <p class="detail ">
                           Вам <span>не надо ездить по магазинам. Мы закупим и доставим все стройматериалы сами.</span>
-                          Без доплаты. Это включено в стоимость
+                          <br>Без доплаты. Это включено в стоимость
                       </p>
                   </div>
                   <div class="detail_item">
@@ -922,11 +1003,11 @@
                           </div>
                           <div class="detail_item">
                               <p>Мы занимаемся ремонтом и строительством с 2004 года.
-                                  16 летний опыт наших специалистов и инженерный подход позволяет нам давать гарантию 2 года на работы и экспертно подсказать вам, как сделать ремонт качественно и грамотно, чтобы потом не пришлось всё переделывать.</p>
+                                  <br>16 летний опыт наших специалистов и инженерный подход позволяет нам давать гарантию 2 года на работы и экспертно подсказать вам, как сделать ремонт качественно и грамотно, чтобы потом не пришлось всё переделывать.</p>
                           </div>
                           <div class="btn_wrapper">
                               <button class="order">
-                                  Заказать ремонт под ключ
+                                  Заказать ремонт
                               </button>
                               <p class="btn_caption grayscale">
                                   Заполните форму, чтобы оставить заявку.
@@ -1009,7 +1090,7 @@
                             Электромонтаж
                         </div>
                         <div class="detail_item">
-                            <p class="detail inverted">Перенос розеток, замена электропроводки, сборка щитов,
+                            <p class="detail inverted">Перенос розеток, замена электропроводки, сборка щитов,<br>
                                 другие работы</p>
                         </div>
                     </div>
@@ -1026,7 +1107,7 @@
                             Сантехника
                         </div>
                         <div class="detail_item">
-                            <p class="detail inverted">Разводка сантех. труб, установка ванн, раковин, унитазов, подключение стиральных и посудомоечных машин и другие работы.</p>
+                            <p class="detail inverted">Разводка сантех. труб, установка ванн, раковин, унитазов, подключение стиральных и посудомоечных машин<br> и другие работы.</p>
                         </div>
                     </div>
                 </div>
@@ -1164,7 +1245,7 @@
                                   <br>Первый раз столкнулась со строителями, с которыми вообще не было никаких проблем! Аккуратно выполненная работа, ответственное отношение, уборка после работы каждый день + полезные рекомендации (например, сделать деревянный пол), которыми я воспользовалась и теперь очень довольна. Цены очень приемлемые для такого качества работы.
                                   Я считаю, что с фирмой Landata мне крупно повезло, чего и всем желаю))</p>
                               <div class="review_text_author">
-                                  — Юрий
+                                  — Анна
                               </div>
                           </div>
                       </div>
@@ -1216,7 +1297,7 @@
                               </div>
                               <div class="btn_wrapper">
                                   <button class="order">
-                                      Заказать ремонт под ключ
+                                      Заказать ремонт
                                   </button>
                               </div>
                               <div class="detail_item column">
@@ -1251,7 +1332,7 @@
                   </div>
                   <div class="btn_wrapper">
                       <button class="order">
-                          Заказать ремонт под ключ
+                          Заказать ремонт
                       </button>
                   </div>
                   <div class="detail_item column">
